@@ -1,3 +1,11 @@
+// Pokretanje aplikacije
+
+window.onload = function(){
+
+    ucitajStatistiku();
+
+};
+
 let pitanja = [];
 let trenutno = 0;
 let tacni = 0;
