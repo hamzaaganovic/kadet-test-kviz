@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "oblast": "Direkcija",
+    "pitanje": "Godišnji plan rada Direkcije izrađuje:",
+    "odgovori": [
+      "Sekretar",
+      "Direktor",
+      "Zamjenik"
+    ],
+    "tacan": 1
+  },
+  {
+    "id": 2,
+    "oblast": "Direkcija",
+    "pitanje": "Godišnji plan rada Direkcije usvaja:",
+    "odgovori": [
+      "Ministar",
+      "Predsjedništvo",
+      "Vijeće ministara BiH"
+    ],
+    "tacan": 2
+  },
+  {
+    "id": 3,
+    "oblast": "Direkcija",
+    "pitanje": "Direktor Direkcije:",
+    "odgovori": [
+      "rukovodi i usmjerava Sindikat",
+      "rukovodi i usmjerava obavljanje poslova iz nadležnosti Direkcije",
+      "rukovodi i usmjerava Ministarstvom"
+    ],
+    "tacan": 1
+  }
+]
