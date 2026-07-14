@@ -12,9 +12,14 @@ let tacni = 0;
 
 const quiz = document.getElementById("quiz");
 
-async function ucitajPitanja() {
-    const odgovor = await fetch("data/pitanja.json");
+async function ucitajPitanja(oblast = "ustav-bih") {
+
+    const odgovor = await fetch(
+        `data/${oblast}.json`
+    );
+
     pitanja = await odgovor.json();
+
 }
 
 function prikaziPitanje() {
@@ -100,7 +105,9 @@ document.getElementById("examBtn").addEventListener("click", async ()=>{
     trenutno=0;
     tacni=0;
 
-    await ucitajPitanja();
+    await ucitajPitanja(
+    "ustav-bih"
+);
 
     prikaziPitanje();
 
