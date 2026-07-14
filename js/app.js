@@ -23,7 +23,15 @@ function prikaziPitanje() {
 
         quiz.innerHTML = `
             <h2>🎉 Kraj testa</h2>
-            <h3>Tačni odgovori: ${tacni} / ${pitanja.length}</h3>
+            <h3>
+Tačni odgovori:
+${tacni} / ${pitanja.length}
+</h3>
+
+<h3>
+Ukupna tačnost:
+${Math.round((tacni/pitanja.length)*100)} %
+</h3>
 
             <button onclick="location.reload()">
                 Počni ponovo
@@ -50,21 +58,30 @@ function prikaziPitanje() {
 
 function provjeri(index){
 
-    if(index===pitanja[trenutno].tacan){
+    statistika.ukupnoPitanja++;
+
+    if(index === pitanja[trenutno].tacan){
+
+        statistika.ukupnoTacnih++;
 
         alert("✅ Tačan odgovor!");
 
-        tacni++;
-
     }else{
 
-        alert("❌ Netačno!");
+        statistika.ukupnoNetacnih++;
+
+        alert("❌ Netačan odgovor!");
 
     }
+
+
+    sacuvajStatistiku();
+
 
     trenutno++;
 
     prikaziPitanje();
+
 }
 
 document.getElementById("learnBtn").addEventListener("click", async ()=>{
